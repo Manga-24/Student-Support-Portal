@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+  <div class="sidebar">
+    <h2>Admin</h2>
+    <a href="admin.html">Dashboard</a>
+    <a href="index.html">Logout</a>
+  </div>
+
+  <div class="main">
+    <div class="header">
+        <div class="card">
+  <h3>Total Issues: <span id="totalCount"></span></h3>
+  <h3>Pending: <span id="pendingCount"></span></h3>
+  <h3>Resolved: <span id="resolvedCount"></span></h3>
+</div>
+
+<div class="card">
+  <input type="text" id="searchBox" placeholder="Search by student or title" onkeyup="searchIssues()">
+</div>
+
+      <h2>Issue Management</h2>
+    </div>
+
+    <div class="card">
+      <table width="100%">
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Update</th>
+          </tr>
+        </thead>
+        <tbody id="issueTable"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
